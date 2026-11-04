@@ -1,0 +1,75 @@
+# CCF Chatbot — Indexed pages
+# Last updated: 2026-07-19
+# Add or remove URLs below. One per line. Comments (#) and blank lines are ignored.
+
+# Homepage
+https://cornwallcommunityfoundation.com/
+
+# Grants — main hub
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/
+
+# Eligibility criteria
+https://cornwallcommunityfoundation.com/eligibility-criteria/
+
+# Application process & guidance
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/application-process-guidance/
+
+# Frequently asked questions
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/application-process-guidance/faqs/
+
+# Available grants
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/grants/
+
+# Grant terms & conditions
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/application-process-guidance/grants-terms-and-conditions/
+
+# Applicant advice and training
+https://cornwallcommunityfoundation.com/cornwall-charity-grants/applicant-training/
+
+# Individual grant pages
+https://cornwallcommunityfoundation.com/grants/swef/
+https://cornwallcommunityfoundation.com/grants/clare-milne/
+https://cornwallcommunityfoundation.com/grants/young-and-talented-creative-writing/
+https://cornwallcommunityfoundation.com/grants/people-in-mind/
+https://cornwallcommunityfoundation.com/grants/resilience-fund/
+https://cornwallcommunityfoundation.com/grants/headland-hotel-community-fund/
+
+# Contact & support
+https://cornwallcommunityfoundation.com/contact-us/
+
+# About
+https://cornwallcommunityfoundation.com/about/
+https://cornwallcommunityfoundation.com/about/our-people/
+https://cornwallcommunityfoundation.com/about/our-finances/
+https://cornwallcommunityfoundation.com/about/our-fundholders/
+
+# Ways to give
+https://cornwallcommunityfoundation.com/ways-to-give/
+
+# Impact
+https://cornwallcommunityfoundation.com/our-impact-strategy/
+
+# Policies
+https://cornwallcommunityfoundation.com/policies/
+
+# Insights
+https://cornwallcommunityfoundation.com/insights/
+
+# News
+https://cornwallcommunityfoundation.com/news/
+
+# Community stories
+https://cornwallcommunityfoundation.com/community-stories/
+
+# Careers
+https://cornwallcommunityfoundation.com/careers/
+
+# ── PDF Documents ──────────────────────────────────────────────
+# Financial accounts
+https://cornwallcommunityfoundation.com/wp-content/uploads/2024/10/Cornwall-Community-Foundation-2021-certified-accounts.pdf
+
+# Sample will wording
+https://cornwallcommunityfoundation.com/wp-content/uploads/2024/10/Sample-wording-for-will-or-codicil-Cornwall-Community-Foundation.pdf
+
+# 2024 Accounts
+https://cornwallcommunityfoundation.com/wp-content/uploads/2025/10/Cornwall-Community-Foundation-2024-Accounts-1.pdf

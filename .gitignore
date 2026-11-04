@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment files
+.env
+.env.local
+
+# Index data (rebuilt from source)
+data/index.pkl
+data/pages_content.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Syncthing
+.stfolder/
+.stignore

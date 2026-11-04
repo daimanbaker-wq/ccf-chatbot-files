@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCF Chatbot — Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f7fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #1E3A5F;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #1E3A5F;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 12px; }
+    code {
+      background: #f0f2f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    pre {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+      margin: 12px 0;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+    .btn {
+      display: inline-block;
+      background: #1E3A5F;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #0f2a44; }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .info-item {
+      background: #f8f9fc;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .info-item strong { display: block; color: #1E3A5F; margin-bottom: 4px; }
+    @media (max-width: 600px) {
+      .info-grid { grid-template-columns: 1fr; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏛️ CCF Applicant Chatbot</h1>
+    <p class="subtitle">Retrieval-augmented chatbot for Cornwall Community Foundation</p>
+
+    <div class="card">
+      <h2>✅ How to embed on your site</h2>
+      <p>Add this script tag just before <code>&lt;/body&gt;</code> on any page:</p>
+      <pre><code>&lt;script src="https://your-server.com/widget/embed.js"
+        data-api-base="https://your-server.com"
+        data-primary-color="#1E3A5F"
+        data-position="bottom-right"
+        data-title="Ask CCF"&gt;&lt;/script&gt;</code></pre>
+      <p>Or initialise manually:</p>
+      <pre><code>&lt;script src="https://your-server.com/widget/embed.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  CCFChatbot.init({
+    apiBase: "https://your-server.com",
+    primaryColor: "#1E3A5F",
+    position: "bottom-right",
+    title: "Ask CCF"
+  });
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>📋 Technical details</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Backend</strong>
+          FastAPI server (Python) with BM25 keyword search
+        </div>
+        <div class="info-item">
+          <strong>Search engine</strong>
+          Pure Python BM25 — no ML dependencies, runs on any server
+        </div>
+        <div class="info-item">
+          <strong>Indexed pages</strong>
+          30 pages (27 HTML + 3 PDFs) covering grants, eligibility, FAQs, policies, annual accounts, and more
+        </div>
+        <div class="info-item">
+          <strong>Re-index</strong>
+          POST /reindex to re-crawl and rebuild the index
+        </div>
+        <div class="info-item">
+          <strong>Data privacy</strong>
+          No personal data logged. No cookies. No tracking.
+        </div>
+        <div class="info-item">
+          <strong>Disclaimer</strong>
+          Visible disclaimer reminds users to verify critical info
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Deploying the server</h2>
+      <p>On your server:</p>
+      <pre><code># Install dependencies
+pip install -r requirements.txt
+
+# Crawl the site
+python crawl.py
+
+# Build the index
+python index.py
+
+# Start the server
+python server.py
+
+# The server runs on http://0.0.0.0:8080
+# Widget available at http://your-server:8080/widget/embed.js</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Known limitations</h2>
+      <ul style="padding-left: 20px;">
+        <li>The chatbot can only answer questions based on the content it has indexed. If a page is missing from <code>data/pages.txt</code>, it won't know about it.</li>
+        <li>Dynamic content (JavaScript-rendered pages) is not crawled — the site's WordPress content is server-rendered, so this is fine.</li>
+        <li>PDF documents are now supported — add PDF URLs to <code>data/pages.txt</code> and they'll be extracted and indexed automatically.</li>
+        <li>The current fallback answer is template-based. For best results, configure an LLM API key in the server.</li>
+      </ul>
+    </div>
+
+    <p style="text-align: center; color: #888; margin-top: 20px;">
+      Cornwall Community Foundation &mdash; Chatbot Demo
+    </p>
+  </div>
+
+  <!-- Load the chatbot widget -->
+  <script src="/widget/embed.js"></script>
+  <script>
+    CCFChatbot.init({
+      apiBase: "",
+      primaryColor: "#1E3A5F",
+      position: "bottom-right",
+      title: "Ask CCF"
+    });
+  </script>
+</body>
+</html>
